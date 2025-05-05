@@ -9,9 +9,9 @@ const passport = require('passport');
 require('./auth_jwt');
 
 const User = require('./User');
-const Item = require('./item');
-const Cart = require('./cart');
-const Order = require('./order');
+const Item = require('./Item');
+const Cart = require('./Cart');
+const Order = require('./Order');
 
 dotenv.config();
 const app = express();

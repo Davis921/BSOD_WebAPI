@@ -33,7 +33,7 @@ const generateToken = (userId) => {
   return jwt.sign({ id: userId }, process.env.SECRET_KEY, { expiresIn: '1d' });
 };
 
-// --- AUTH ROUTES ---
+//AUTH ROUTES
 
 app.post('/signup', async (req, res) => {
   const { name, email, password } = req.body;
@@ -77,7 +77,7 @@ app.get('/items', async (req, res) => {
   }
 });
 
-// --- CART ROUTES ---
+//CART ROUTES
 
 const { isAuthenticated } = require('./auth_jwt');
 
@@ -170,7 +170,7 @@ app.post('/checkout', isAuthenticated, async (req, res) => {
   }
 });
 
-// --- START SERVER ---
+//START SERVER
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
